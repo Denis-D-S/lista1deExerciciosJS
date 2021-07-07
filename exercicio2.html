@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+
+<script>
+
+    var areaDoQuadrado;
+
+    function calculaAreaQuadrado ( areaDoQuadrado){
+        //DICA: area do quadrado = base*altura (ou seja, qualquer lado elevado ao quadrado)
+        
+        var ladoDoQuadrado = prompt("Qual o tamanho do lado do seu quadrado? ");
+
+        areaDoQuadrado = Math.pow(ladoDoQuadrado, 2); //DICA: o primeiro parâmetro do Math.pow é o numero base, e o segundo parâmetro é o expoente
+
+        return areaDoQuadrado;
+    }
+
+    areaDoQuadrado = calculaAreaQuadrado(areaDoQuadrado);
+    document.write("A área do seu quadrado é: " + areaDoQuadrado + "<br><br>");
+
+    var dobroDaArea = areaDoQuadrado * 2;
+    document.write("O dobro da área do seu quadrado é: " + dobroDaArea);
+    
+</script>
+</body>
+</html>

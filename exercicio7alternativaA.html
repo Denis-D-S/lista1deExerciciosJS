@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - alternativa a)</title>
+</head>
+<body>
+    
+<script>
+//Solução da alternativa a)
+var metrosQueDesejaPintar = prompt("Quantos metros quadrados você deseja pintar? ");
+
+function converteEmLitros(metrosQueDesejaPintar){
+    rendimentoDoLitroDeTinta = 6; //1 litro pinta 6 metros quadrados
+
+    var litros = metrosQueDesejaPintar/rendimentoDoLitroDeTinta;
+
+    return litros;
+}
+
+
+function calculaQuantosLatoes(litros){
+    var latao = 18;
+    var excesso = 0;
+    var contadorDeLatoes = 0;
+    
+    do{
+        //alert("entrei no DO-WHILE");
+        excesso = litros-latao; 
+        litros = excesso; 
+        console.log(litros);  
+
+        contadorDeLatoes++; 
+        console.log(contadorDeLatoes); 
+
+    } while(litros>=0); //é 0 pois tudo, cada metro quadrado, precisa acabar pintado
+
+    return contadorDeLatoes;
+ 
+}
+
+function calculaPreco(contadorDeLatoes){
+    var preco = 80 //latão é R$ 80
+
+    precoFinal = contadorDeLatoes*preco;
+
+    return precoFinal
+}
+
+//-------------------------------------------------------------
+
+litros = converteEmLitros(metrosQueDesejaPintar);
+contadorDeLatoes = calculaQuantosLatoes(litros);
+precoFinal = calculaPreco(contadorDeLatoes);
+
+
+document.write("Você deseja pintar " + metrosQueDesejaPintar + " metros quadrados, e para isso você vai precisar de " + contadorDeLatoes + " latas de tinta!" + "<br>");
+document.write("Você vai precisar gastar R$ " + precoFinal);
+</script>
+
+</body>
+</html>

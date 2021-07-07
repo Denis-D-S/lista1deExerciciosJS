@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - alternativa c)</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const METROS = 6;
+    
+    var metrosQueDesejaPintar = prompt("Quantos metros quadrados você deseja pintar? ");
+
+    var litros = metrosQueDesejaPintar / METROS;
+
+    var latoes = parseInt(litros/18); 
+    
+    var precoTotalLatoes = latoes * 80;
+
+    var galoes = Math.ceil(Math.ceil(litros % 18) / 3.6);  
+
+    var precoTotalGaloes = galoes * 25;
+
+    var precoTotal = precoTotalLatoes + precoTotalGaloes;
+    
+    console.log("A quantidade de latões que você vai usar é: " + latoes);
+    console.log("A quantidade de latinhas que você vai usar é: " + galoes);
+    console.log("O preço $$ total que você vai gastar é: " + precoTotal);
+
+    document.write("Você deseja pintar " + metrosQueDesejaPintar + " metros quadrados. Para isso você vai precisar de " + latoes + " latões, e de " + galoes + " latinhas de tinta. No total, isso vai custar R$ " + precoTotal + "." + "<br>");
+
+</script>
+</html>
